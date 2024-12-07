@@ -1,0 +1,9 @@
+# Cho phép tất cả bot truy cập toàn bộ website
+User-agent: *
+Disallow:
+
+# Không cho bot truy cập thư mục admin
+Disallow: /admin/
+
+# Khai báo sitemap
+Sitemap: https://naokiscript.vercel.app/sitemap.xml
