@@ -1,21 +1,22 @@
-// Function to copy script to clipboard
-function copyScript() {
-    const script = document.getElementById('script');
-    script.select();
-    script.setSelectionRange(0, 99999); // For mobile devices
-    navigator.clipboard.writeText(script.value);
+// Image Slider
+const images = [
+    "https://i.ibb.co/TT32B27/16732694052-1733441707445.png",
+    "https://i.ibb.co/jDXfRN6/2753915549-1732912903033.png"
+  ];
+  let currentImage = 0;
+  const imageSlider = document.getElementById("image-slider");
+  
+  setInterval(() => {
+    currentImage = (currentImage + 1) % images.length;
+    imageSlider.src = images[currentImage];
+  }, 3000);
+  
+  // Copy Script
+  const copyButton = document.getElementById("copy-button");
+  const scriptArea = document.getElementById("script-area");
+  
+  copyButton.addEventListener("click", () => {
+    scriptArea.select();
+    document.execCommand("copy");
     alert("Script đã được sao chép!");
-}
-
-// Automatic image slider
-const images = ['demo1.png', 'demo.png']; // Add your image paths here
-let currentIndex = 0;
-
-function changeImage() {
-    const sliderImage = document.getElementById('slider-image');
-    currentIndex = (currentIndex + 1) % images.length;
-    sliderImage.src = images[currentIndex];
-}
-
-// Change image every 3 seconds
-setInterval(changeImage, 3000);
+  });
