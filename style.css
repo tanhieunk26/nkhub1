@@ -1,140 +1,138 @@
-/* Reset mặc định */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a; /* Nền đen đậm */
+  color: #e2e8f0; /* Màu chữ sáng */
+  margin: 0;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f0f1f, #000000);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    line-height: 1.6;
+/* Tiêu đề */
+h1, h2 {
+  color: #60a5fa; /* Xanh lam */
+  text-align: center;
+  transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi cho tiêu đề */
+}
+
+h1:hover, h2:hover {
+  transform: none; /* Không phóng lên khi hover */
+}
+
+h3 {
+  color: #ef4444; /* Màu đỏ */
 }
 
 /* Header */
-.header {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+header {
+  background: linear-gradient(90deg, #0f172a, #833434); /* Gradient cam và đỏ */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.title {
-    font-size: 3rem;
-    color: #ff7b54;
-    text-shadow: 0 0 10px #ff7b54, 0 0 20px #ff7b54;
+header nav a {
+  color: #cbd5e1;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
 }
 
-/* Main content */
-.main-content {
-    flex: 1;
-    padding: 20px;
+header nav a:hover {
+  color: #ffffff;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #ff7b54;
+/* Developer Team Section */
+.developer-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #1e293b; /* Xám tối */
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4); /* Phát sáng nhẹ */
 }
 
-/* Image slider */
-.image-section .image-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+.developer-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(245, 158, 11, 0.6); /* Màu vàng khi hover */
 }
 
-.glow-image {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-    transition: all 0.3s ease;
+/* Developer Team Container */
+.developer-team-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
 }
 
-/* Script section */
-.script-section {
-    text-align: center;
-    margin: 30px 0;
+/* Developer Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
 }
 
-.script-container {
-    display: inline-block;
-    width: 100%;
-    max-width: 600px;
+/* Tiêu đề của Developer Team */
+.developer-team-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+  background-color: #1e293b; /* Thêm nền đậm phía sau */
+  padding: 1rem; /* Thêm khoảng cách cho tiêu đề */
+  border-radius: 8px; /* Bo góc nhẹ */
 }
 
-textarea {
-    width: 100%;
-    height: 80px;
-    border-radius: 10px;
-    border: none;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    font-size: 1rem;
-    padding: 10px;
-    resize: none;
-    text-align: center;
+/* Avatar Styles */
+img.rounded-full {
+  border-radius: 50%;
+  border: 2px solid #ef4444; /* Viền đỏ cho avatar */
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4); /* Màu vàng ánh sáng */
 }
 
-textarea:focus {
-    outline: none;
+/* Cards */
+.bg-gray-800 {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: none;
-    background: #ff7b54;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+.bg-gray-800:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(239, 68, 68, 0.6);
 }
 
-button:hover {
-    background: #ff4a24;
-    box-shadow: 0 4px 20px rgba(255, 74, 36, 0.7);
+#image-slider {
+  object-fit: cover; /* Đảm bảo ảnh phủ toàn bộ không gian */
+  width: 100%;
+  height: 100%; /* Chiếm toàn bộ chiều cao */
+  border-radius: 12px; /* Bo góc ảnh */
+  box-shadow: 0 0 10px 3px rgba(59, 130, 246, 0.6); /* Viền ban đầu */
+  animation: glowing-border 5s infinite; /* Hiệu ứng đổi màu viền */
+  transition: box-shadow 0.4s ease; /* Mượt khi hover */
 }
 
-/* Info section */
-.info-section {
-    margin: 30px 0;
-    text-align: center;
+#image-slider:hover {
+  box-shadow: 0 0 15px 5px rgba(59, 130, 246, 0.8); /* Phát sáng mạnh hơn khi hover */
 }
 
-.info-list {
-    list-style: none;
-    padding: 0;
-}
-
-.info-list li {
-    margin: 10px 0;
-    padding-left: 20px;
-    position: relative;
-}
-
-.info-list li::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    color: #ff7b54;
-    font-weight: bold;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    font-size: 0.9rem;
-    color: #aaa;
+@keyframes glowing-border {
+  0% {
+    box-shadow: 0 0 10px 3px rgba(59, 130, 246, 0.6); /* Xanh lam */
+  }
+  25% {
+    box-shadow: 0 0 10px 3px rgba(34, 197, 94, 0.6); /* Xanh lục */
+  }
+  50% {
+    box-shadow: 0 0 10px 3px rgba(249, 115, 22, 0.6); /* Cam */
+  }
+  75% {
+    box-shadow: 0 0 10px 3px rgba(239, 68, 68, 0.6); /* Đỏ */
+  }
+  100% {
+    box-shadow: 0 0 10px 3px rgba(59, 130, 246, 0.6); /* Quay lại Xanh lam */
+  }
 }
