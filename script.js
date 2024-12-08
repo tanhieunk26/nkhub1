@@ -18,5 +18,5 @@ const images = [
   copyButton.addEventListener("click", () => {
     scriptArea.select();
     document.execCommand("copy");
-    alert("Script đã được sao chép!");
+    alert("Copy Script Successfully !");
   });
