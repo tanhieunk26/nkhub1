@@ -29,79 +29,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Naoki Hub is the ultimate script hub supporting Blox Fruits and Fisch with features like Auto Farm, ESP Players, Teleport, and more. Explore our powerful and user-friendly scripts.">
-    <meta name="keywords" content="Naoki Hub, Script Hub, Blox Fruits, Fisch, Roblox Scripts, Auto Farm, ESP Players">
-    <meta name="author" content="Naoki Hub Team">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Naoki Hub - The Ultimate Script Hub">
-    <meta property="og:description" content="Explore Naoki Hub - your go-to script hub for Blox Fruits and Fisch, packed with powerful features.">
-    <meta property="og:image" content="https://naokihub.com/demo.png">
-    <meta property="og:url" content="https://naokihub.com">
-    <meta property="og:type" content="website">
+  <!-- Cơ bản -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Naoki Hub - The Ultimate Script Hub">
-    <meta name="twitter:description" content="Explore Naoki Hub - your go-to script hub for Blox Fruits and Fisch, packed with powerful features.">
-    <meta name="twitter:image" content="https://naokihub.com/demo.png">
+  <!-- Tiêu đề SEO -->
+  <title>Naoki Hub - Naoki Community</title>
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://naokihub.com">
+  <!-- Thẻ mô tả SEO -->
+  <meta name="description" content="Naoki Hub - Script Hub Blox Fruits & Fisch">
 
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <title>Naoki Hub - The Ultimate Script Hub</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Từ khóa SEO -->
+  <meta name="keywords" content="Naoki Hub, Blox Fruits, Fisch, gaming community, game guides, online events, gaming forums, game updates, player community, script fisch, script blox fruits, script anti ban, scrip fisch anti ban, script blox fruits anti ban">
+
+  <!-- Tác giả -->
+  <meta name="author" content="Naoki Hub">
+
+  <!-- Open Graph (OG) Tags -->
+  <meta property="og:title" content="Naoki Hub">
+  <meta property="og:description" content="Discover the latest in Blox Fruits and Fisch. Join Naoki Hub for guides, events, and connections with players worldwide.">
+  <meta property="og:image" content="https://i.ibb.co/TT32B27/16732694052-1733441707445.png"> <!-- Link ảnh đại diện -->
+  <meta property="og:url" content="https://naokiscript.vercel.app"> <!-- URL chính thức -->
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Naoki Hub">
+  <meta name="twitter:description" content="Join Naoki Hub - The best community for Blox Fruits and Fisch gamers. Stay updated with guides and events.">
+  <meta name="twitter:image" content="https://i.ibb.co/TT32B27/16732694052-1733441707445.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://naokiscript.vercel.app">
+
+  <!-- CSS & Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="header">
-        <h1 class="title">Naoki Hub</h1>
-    </header>
+<body class="bg-gray-900 text-gray-200 font-inter">
 
-    <main class="main-content">
-        <!-- Ảnh với hiệu ứng bo tròn phát sáng -->
-        <section class="image-section">
-            <div class="image-container">
-                <img src="demo.png" alt="Naoki Hub script example" class="glow-image" id="slider-image" title="Naoki Hub - Script Demo">
-            </div>
-        </section>
+  <!-- Header -->
+  <header class="flex justify-between items-center py-4 px-6 bg-gray-800 shadow-lg">
+    <div class="flex items-center">
+      <h1 class="text-2xl font-bold text-indigo-400">Naoki Hub</h1>
+    </div>
+    <!-- Hamburger Icon (hiển thị trên điện thoại) -->
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <nav id="nav-menu">
+    <a href="#games">Games</a>
+    <a href="#team">Team</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+  </header>  
 
-        <!-- Khung chứa Script Hub -->
-        <section class="script-section">
-            <h2 class="section-title">Copy Script Naoki Hub</h2>
-            <div class="script-container">
-                <textarea id="script" readonly aria-label="Naoki Hub script">
--- Naoki Hub Script --
-loadstring(game:HttpGet("https://naokihub.vercel.app",true))()
-                </textarea>
-                <button onclick="copyScript()">Copy Script</button>
-            </div>
-        </section>
 
-        <!-- Thông tin chức năng -->
-        <section class="info-section">
-            <h2 class="section-title">Game Features & Support</h2>
-            <ul class="info-list">
-                <li>Auto Farm</li>
-                <li>Auto Quest</li>
-                <li>ESP Players</li>
-                <li>Teleport Speed</li>
-                <li>Support : Blox Fruits & Fisch</li>
-                <li>More ...</li>
-            </ul>
-        </section>
-    </main>
+  <!-- Image Slider -->
+  <section class="flex justify-center mt-6">
+    <div class="relative w-full max-w-lg">
+      <img id="image-slider" class="rounded-lg shadow-lg w-full h-64 object-cover transition-opacity duration-1000" src="https://i.ibb.co/TT32B27/16732694052-1733441707445.png" alt="Image 1">
+    </div>
+  </section>
 
-    <footer class="footer">
-        <p>© 2024 Naoki Hub. All rights reserved.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+  <!-- Script Section -->
+  <section class="mt-8 px-4">
+    <div class="max-w-xl mx-auto p-4 bg-gray-800 rounded-lg shadow-lg">
+      <h2 class="text-xl font-semibold text-gray-100 mb-4">Script của bạn</h2>
+      <textarea id="script-area" class="w-full h-32 border-gray-600 bg-gray-900 text-gray-200 rounded-lg p-2 text-sm" readonly>-- Naoki Hub Script -- loadstring(game:HttpGet("https://naokihub.vercel.app",true))()</textarea>
+      <button id="copy-button" class="mt-4 bg-indigo-500 text-white py-2 px-4 rounded hover:bg-indigo-600 transition">Copy Script</button>
+    </div>
+  </section>
+
+  <!-- Social Media -->
+  <section class="mt-8 px-4">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-gray-100 mb-6">Kết Nối Với Chúng Tôi</h2>
+      <div class="flex justify-center gap-6">
+        <a href="https://youtube.com/@NaokiCommunity" target="_blank" class="text-gray-300 hover:text-pink-500 transition">
+          <i class="fab fa-youtube fa-2x"></i>
+          <span class="ml-2">Youtube</span>
+        </a>
+        <a href="https://discord.gg/naokifamily" target="_blank" class="text-gray-300 hover:text-indigo-400 transition">
+          <i class="fab fa-discord fa-2x"></i>
+          <span class="ml-2">Discord</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Games -->
+  <section id="games" class="mt-8 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-gray-100 mb-6">Supported Games</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Game 1 -->
+        <div class="flex items-center bg-gray-800 rounded-lg p-4 shadow-lg">
+          <img src="https://i.ibb.co/CnQRRrK/blox-fruits-game-art-kvn6uu82rn8hbs4h.jpg" alt="Blox Fruits Logo" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h3 class="text-lg font-semibold text-white">Blox Fruits</h3>
+            <p class="text-sm text-gray-400">Một trong những tựa game phổ biến nhất hỗ trợ bởi Naoki Hub.</p>
+          </div>
+        </div>
+        <!-- Game 2 -->
+        <div class="flex items-center bg-gray-800 rounded-lg p-4 shadow-lg">
+          <img src="https://i.ibb.co/61c7fXJ/noFilter.webp" alt="Fisch Logo" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h3 class="text-lg font-semibold text-white">Fisch</h3>
+            <p class="text-sm text-gray-400">Khám phá thế giới độc đáo với hỗ trợ từ Naoki Hub.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Developers Team -->
+<section class="mt-8 px-4">
+  <div class="developer-team-container">
+    <h2 class="text-2xl font-bold text-gray-100 mb-6">Developers Team</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Developer Card -->
+      <div class="bg-gray-800 rounded-lg shadow-lg p-4 text-center">
+        <img class="w-24 h-24 mx-auto rounded-full border-2 border-indigo-500" src="https://i.ibb.co/LrZ8JQj/avt3.png" alt="Dev Avatar">
+        <h3 class="text-lg font-semibold text-white mt-4">Naoki</h3>
+        <p class="text-gray-400 mt-2">Owner</p>
+        <p class="text-sm text-gray-500 mt-1">Huỳnh Tấn Hiếu ( Chẳng Có Gì Đặc Biệt )</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-gray-800 text-gray-400 mt-8">
+    <p>&copy; 2024 Naoki Hub. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
