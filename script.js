@@ -1,7 +1,7 @@
 // Image Slider
 const images = [
     "https://i.ibb.co/TT32B27/16732694052-1733441707445.png",
-    "https://i.ibb.co/jDXfRN6/2753915549-1732912903033.png"
+    "https://i.ibb.co/WPs8tLS/Capture.png"
   ];
   let currentImage = 0;
   const imageSlider = document.getElementById("image-slider");
